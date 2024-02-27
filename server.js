@@ -7,6 +7,8 @@ var logger = require('morgan');
 require('dotenv').config();
 require('./config/database');
 
+const recipes = require("./data/recipe");
+
 const recipesRouter = require("./routes/recipes");
 const reviewsRouter = require("./routes/reviews");
 
@@ -18,7 +20,7 @@ var app = express();
 
 const port = 3000;
 app.get('/', (req, res) => {
-  res.render('./main', {title: "simmer"})
+  res.render('./main', {title: "simmer", recipes})
 });
 
 // view engine setup
