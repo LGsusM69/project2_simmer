@@ -4,10 +4,19 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+require('dotenv').config();
+require('./config/database');
+
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
+const port = 3000;
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
