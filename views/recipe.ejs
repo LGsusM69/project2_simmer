@@ -1,0 +1,19 @@
+<!-- view template for displaying list of recipes-->
+
+<%- include('../partials/header') %>
+
+<h6>Recipes</h6>
+
+<div class="recipe-list">
+    <% recipes.forEach(recipe => { %>
+        <div class="recipe-item">
+            <h2><%= recipe.title %></h2>
+            <p><%= recipe.description %></p>
+            <p><strong>Ingredients:</strong> <%= recipe.ingredients %></p>
+            <p><%Instructions:</strong> <%= recipe.instructions %></p>
+            <img src="<%= recipe.imgURL %>" alt="<%= recipe.title %> Image">
+        </div>
+    <% }) %>
+</div>
+
+<%- include('../partials/footer') %>
