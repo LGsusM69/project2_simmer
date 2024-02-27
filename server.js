@@ -8,6 +8,7 @@ require('dotenv').config();
 require('./config/database');
 
 const recipesRouter = require("./routes/recipes");
+const reviewsRouter = require("./routes/reviews");
 
 
 var indexRouter = require('./routes/index');
@@ -33,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use("/recipes", recipesRouter);
+app.use("/reviews", reviewsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
