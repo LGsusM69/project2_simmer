@@ -6,3 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
+
+.grid {
+  background-color: grey;
+  display: flex;
+  flex-direction: row;;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 300px;
+}
