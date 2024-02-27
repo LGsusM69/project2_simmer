@@ -17,7 +17,7 @@ var app = express();
 
 const port = 3000;
 app.get('/', (req, res) => {
-  res.redirect('/recipes')
+  res.render('./main', {title: "simmer"})
 });
 
 // view engine setup
