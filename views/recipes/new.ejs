@@ -1,6 +1,6 @@
 
 
-<%- include('../partials/header', { title: 'Add Recipe' }) %>
+<%- include('../partials/header', { title: 'SIMMER' }) %>
 <h4> Whip Up Something New: Share Your Recipe with the World!</h4>
 <div class="form-container">
     <form action="/recipes" method="POST" class="flex-form">
@@ -14,7 +14,7 @@
         <textarea name="instructions"></textarea> <!-- Changed to textarea -->
         <label for="imgURL">Image url:</label>
         <input type="text" name="imgURL">
-        <input type="submit">
+        <input type="submit" value="Add Recipe">
     </form>
 </div>
 
