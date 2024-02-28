@@ -202,4 +202,14 @@ h4 {
 .recipe-item img {
   max-width: 100%; 
   height: auto; 
+  
+}.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+}
+
+.login img {
+  height: 30px;
 }
