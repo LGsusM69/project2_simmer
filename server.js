@@ -18,11 +18,6 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 const port = 3000;
-app.get('/', (req, res) => {
-  const recipes = recipeData.recipes;
-  const savedRecipes = recipeData.savedRecipes;
-  res.render('./main', {title: "simmer", recipes, savedRecipes})
-});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
