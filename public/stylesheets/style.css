@@ -3,8 +3,13 @@ body {
   height: 100%;
   background-color: darkgray;
   font-family: "Bebas Neue", sans-serif;
+}
+h1 {
+  text-align: center;
+}
 
-
+h2 {
+  text-align: center;
 }
 
 #nav-bar {
@@ -148,51 +153,50 @@ h4 {
 
 .form-container {
   display: flex;
-  justify-content: center; /* Align form horizontally in the center */
-  align-items: center; /* Align form vertically in the center */
-  height: 100vh; /* Optional: Adjust height as needed */
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
 }
 
 .flex-form {
   display: flex;
   flex: wrap;
-  flex-direction: column; /* Arrange form elements vertically */
-  width: 500px; /* Optional: Adjust width as needed */
+  flex-direction: column; 
+  width: 500px; 
 }
 
 .flex-form label {
-  margin-bottom: 5px; /* Optional: Add space between labels and inputs */
+  margin-bottom: 5px; 
 }
 
 .flex-form input {
-  margin-bottom: 10px; /* Optional: Add space between inputs */
+  margin-bottom: 10px; 
 }
 
 .flex-form textarea {
-  height: 100px; /* Adjust the height as needed */
-  resize: vertical; /* Optional: Allow vertical resizing */
+  height: 100px;
+  resize: vertical; 
 }
 
 .recipe-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Adjust the gap between recipe items */
+  gap: 20px; 
 }
 
 .recipe-item {
-  width: calc(33.33% - 20px); /* Adjust the width of each recipe item */
-  /* Subtracting gap width from width to ensure consistent spacing */
-  background-color: #f9f9f9; /* Add background color for better visibility */
-  padding: 20px; /* Add padding for spacing within each recipe item */
-  box-sizing: border-box; /* Ensure padding and border are included in the width */
+  width: calc(33.33% - 20px); 
+  background-color: #f9f9f9; 
+  padding: 20px; 
+  box-sizing: border-box; 
 }
 
 .recipe-item h2 {
-  margin-top: 0; /* Remove default margin for consistency */
+  margin-top: 0; 
 }
 
 .recipe-item p {
-  margin-bottom: 10px; /* Add margin bottom to separate paragraphs */
+  margin-bottom: 10px; 
 }
 
 .recipe-item img {

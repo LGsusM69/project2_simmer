@@ -2,6 +2,7 @@
 
 </br> </br>
 
+
 <div class="recipe-list">
     <% recipes.forEach(recipe => { %>
         <div class="recipe-item">
@@ -10,6 +11,12 @@
             <p><strong>Ingredients:</strong> <%= recipe.ingredients %></p>
             <p><strong>Instructions:</strong> <%= recipe.instructions %></p>
             <img src="<%= recipe.imgURL %>" alt="<%= recipe.title %> Image">
+
+            <!-- Save Recipe feature: -->
+            <form action="/save-recipe" method="post">
+                <input type="hidden" name="recipeId" value="<%= recipe.id %>">
+                <button type="submit">Save Recipe</button>
+            </form>
         </div>
     <% }) %>
 </div>

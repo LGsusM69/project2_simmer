@@ -31,4 +31,4 @@ const savedRecipes = [
     {title: "Pizza", imgURL: "/images/pizza.png"}
 ];
 
-module.exports = { recipes, savedRecipes};
+module.exports = {recipes, savedRecipes};

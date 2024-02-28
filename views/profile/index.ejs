@@ -1,18 +1,15 @@
 <%- include("../partials/header", {title: "SIMMER"})%>
+
     <h1>Welcome to Your Profile</h1>
 
     <h2>Your Saved Recipes</h2>
     <% if (savedRecipes.length > 0) { %>
         <ul>
             <% savedRecipes.forEach(function(recipe) { %>
-                <li>
-                    <h3><%= recipe.title %></h3>
-                    <img src="<%= recipe.imgURL %>" alt="<%= recipe.title %> Image" width="200">
-                </li>
+                <li><%= recipe.title %></li>
             <% }); %>
         </ul>
     <% } else { %>
         <p>No saved recipes yet.</p>
     <% } %>
-
-    <%- include("../partials/footer") %>
+<%- include("../partials/footer") %>
