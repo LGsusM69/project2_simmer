@@ -6,7 +6,7 @@ deleteReview
 };
 
 async function newReview(req, res) {
-    res.render("reviews/new", {title: "Add review"});
+    res.render("reviews/new");
 }
 
 async function deleteReview(req, res) {
