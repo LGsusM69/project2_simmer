@@ -34,9 +34,6 @@ app.use('/users', usersRouter);
 app.use("/recipes", recipesRouter);
 app.use("/reviews", reviewsRouter);
 app.use("/profiles", profilesRouter);
-app.post('/save-recipe', (req, res) => {
-  const { recipeId } = req.body;
-});
 
 
 // catch 404 and forward to error handler
