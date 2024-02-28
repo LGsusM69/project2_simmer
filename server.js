@@ -45,6 +45,10 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.get('/', (req, res) => {
+  const user = req.user; // Assuming req.user is set by a middleware like passport.js
+  res.render('./partials/header', { title: 'Simmer', user });
+});
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use("/recipes", recipesRouter);
