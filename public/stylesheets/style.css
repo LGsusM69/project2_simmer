@@ -23,6 +23,7 @@ body {
   height: 100vh;
   background-color: rgba(0, 0, 0, .7);
   transition: right 0.3s ease-in-out;
+
 }
 
 #menu.open {
@@ -49,7 +50,7 @@ body {
 .nav-img {
   height: 60px;
   width: 40px;
-  float: right;
+ 
 }
 
 #nav-title {
