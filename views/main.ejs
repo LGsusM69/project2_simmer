@@ -1,7 +1,7 @@
 <!--LANDING PAGE-->
 
-<%- include('./partials/header') %>
-  
+<% let user = {}; %>
+<%- include('./partials/header', { user: user }) %>
 
     <form role="search" id="search-bar">
       <input type="search" class="form-control" placeholder="Find a recipe..." aria-label="Search">
