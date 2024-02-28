@@ -25,4 +25,10 @@ const recipes = [
 
 ];
 
-module.exports = recipes;
+const savedRecipes = [
+    {title: "Salad", imgURL: "/images/salad.png"},
+    {title: "Pasta", imgURL: "/images/pasta.png"},
+    {title: "Pizza", imgURL: "/images/pizza.png"}
+];
+
+module.exports = { recipes, savedRecipes};
