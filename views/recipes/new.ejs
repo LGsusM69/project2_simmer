@@ -1,17 +1,21 @@
-<%- include('../partials/header') %>
+=<%- include('../partials/header') %>
 
-<form action="/recipes" method="POST">
-    <label for="title">Title:</label>
-    <input type="text" name="title">
-    <label for="description">Description:</label>
-    <input type="text" name="description">
-    <label for="ingredients">Ingredients:</label>
-    <input type="text" name="ingredients">
-    <label for="instructions">Instructions:</label>
-    <input type="text" name="instructions">
-    <label for="imgURL">Image url:</label>
-    <input type="text" name="imgURL">
-    <input type="submit">
-</form>
+
+<h4> Whip Up Something New: Share Your Recipe with the World!</h4>
+<div class="form-container">
+    <form action="/recipes" method="POST" class="flex-form">
+        <label for="title">Title:</label>
+        <input type="text" name="title">
+        <label for="description">Description:</label>
+        <textarea name="description"></textarea> <!-- Changed to textarea -->
+        <label for="ingredients">Ingredients:</label>
+        <textarea name="ingredients"></textarea> <!-- Changed to textarea -->
+        <label for="instructions">Instructions:</label>
+        <textarea name="instructions"></textarea> <!-- Changed to textarea -->
+        <label for="imgURL">Image url:</label>
+        <input type="text" name="imgURL">
+        <input type="submit">
+    </form>
+</div>
 
 <%- include('../partials/footer') %>
