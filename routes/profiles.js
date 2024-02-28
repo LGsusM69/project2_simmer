@@ -4,7 +4,7 @@ const router = express.Router();
 const profilesCtrl = require("../controllers/profiles");
 
 
-router.get("/", recipesCtrl.index);
+router.get("/", profilesCtrl.index);
 
 
 

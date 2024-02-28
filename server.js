@@ -9,12 +9,10 @@ require('./config/database');
 
 const recipes = require("./data/recipe");
 
+var indexRouter = require('./routes/index');
 const recipesRouter = require("./routes/recipes");
 const reviewsRouter = require("./routes/reviews");
 const profilesRouter = require("./routes/profiles");
-
-
-var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -38,7 +36,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use("/recipes", recipesRouter);
 app.use("/reviews", reviewsRouter);
-app.use("profiles", profilesRouter);
+app.use("/profiles", profilesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
