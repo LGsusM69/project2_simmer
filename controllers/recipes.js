@@ -5,5 +5,5 @@ new: newRecipe
 };
 
 async function newRecipe(req, res) {
-    res.render("recipes/new", {title: "random title"});
+    res.render("recipes/new",);
 }
