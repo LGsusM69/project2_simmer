@@ -5,7 +5,10 @@
     <% if (savedRecipes.length > 0) { %>
         <ul>
             <% savedRecipes.forEach(function(recipe) { %>
-                <li><%= recipe.title %></li>
+                <li>
+                    <h3><%= recipe.title %></h3>
+                    <img src="<%= recipe.imgURL %>" alt="<%= recipe.title %> Image" width="200">
+                </li>
             <% }); %>
         </ul>
     <% } else { %>
