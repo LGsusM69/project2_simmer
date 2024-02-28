@@ -1,5 +1,25 @@
+<<<<<<< HEAD
 =<%- include('../partials/header') %>
 
+=======
+<%- include('../partials/header', { title: 'Add Recipe' }) %>
+
+<form action="/recipes" method="POST" class="add-recipe-form">
+    <label for="title">Title:</label>
+    <input type="text" name="title">
+    <label for="description">Description:</label>
+    <input type="text" name="description">
+    <label for="ingredients">Ingredients:</label>
+    <input type="text" name="ingredients">
+    <label for="instructions">Instructions:</label>
+    <input type="text" name="instructions">
+    <label for="imgURL">Image url:</label>
+    <input type="text" name="imgURL">
+    <input type="submit">
+</form>
+>>>>>>> 127ecde32e192f55038826f68e115daccd84249f
+
+<%- include('../partials/header', { title: 'Add Recipe' }) %>
 
 <h4> Whip Up Something New: Share Your Recipe with the World!</h4>
 <div class="form-container">
