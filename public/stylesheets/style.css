@@ -1,17 +1,140 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100%;
+  background-color: darkgray;
+
+
 }
 
-a {
-  color: #00B7FF;
-}
-
-.grid {
-  background-color: grey;
+#nav-bar {
   display: flex;
-  flex-direction: row;;
-  flex-wrap: wrap;
-  width: 400px;
-  height: 300px;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: black;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  right: -300px; 
+  width: 300px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .7);
+  transition: right 0.3s ease-in-out;
+}
+
+#menu.open {
+  right: 0; 
+}
+
+#menu.open {
+  display: block;
+}
+
+#menu a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-img {
+  height: 40px;
+  width: auto; 
+  cursor: pointer;
+}
+
+.nav-img {
+  height: 60px;
+  width: 40px;
+  float: right;
+}
+
+#nav-title {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  
+}
+
+#close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-btn {
+  display: block;
+  padding: 10px;
+  background-color: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  justify-content: flex-end;
+
+}
+
+.login-btn {
+  border: red 2px solid;
+  background-color: #EE3636;
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  padding: 10px 20px;
+  border-radius: 15%;
+  padding: 0 10px;
+}
+
+.menu-item {
+  border-bottom: #fff 1px solid;
+  
+}
+
+#menu-img {
+  width: 50px;
+  height: 70px;
+}
+
+.menu-h6 {
+  margin-bottom: 50px;
+}
+
+.item {
+  padding: 10px;
+
+}
+
+.dropdown {
+  display: block;
+  color: white;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.dropdown a:hover {
+  background-color: #555;
+}
+
+#search-bar {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  padding-top: 30px;
+  
+}
+
+.search-btn {
+  border: red 2px solid;
+  background-color: #EE3636;
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 15%;
 }
