@@ -173,3 +173,29 @@ h4 {
   resize: vertical; /* Optional: Allow vertical resizing */
 }
 
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between recipe items */
+}
+
+.recipe-item {
+  width: calc(33.33% - 20px); /* Adjust the width of each recipe item */
+  /* Subtracting gap width from width to ensure consistent spacing */
+  background-color: #f9f9f9; /* Add background color for better visibility */
+  padding: 20px; /* Add padding for spacing within each recipe item */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.recipe-item h2 {
+  margin-top: 0; /* Remove default margin for consistency */
+}
+
+.recipe-item p {
+  margin-bottom: 10px; /* Add margin bottom to separate paragraphs */
+}
+
+.recipe-item img {
+  max-width: 100%; 
+  height: auto; 
+}
