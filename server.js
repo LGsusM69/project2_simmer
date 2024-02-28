@@ -16,7 +16,6 @@ var indexRouter = require('./routes/index');
 const recipesRouter = require("./routes/recipes");
 const reviewsRouter = require("./routes/reviews");
 const profilesRouter = require("./routes/profiles");
-var usersRouter = require('./routes/users');
 
 var app = express();
 
@@ -50,7 +49,6 @@ app.get('/', (req, res) => {
   res.render('./partials/header', { title: 'Simmer', user });
 });
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use("/recipes", recipesRouter);
 app.use("/reviews", reviewsRouter);
 app.use("/profiles", profilesRouter);
