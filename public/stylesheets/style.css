@@ -140,3 +140,35 @@ body {
   border-radius: 15%;
   font-size: 20px;
 }
+
+h4 {
+  text-align: center;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center; /* Align form horizontally in the center */
+  align-items: center; /* Align form vertically in the center */
+  height: 100vh; /* Optional: Adjust height as needed */
+}
+
+.flex-form {
+  display: flex;
+  flex: wrap;
+  flex-direction: column; /* Arrange form elements vertically */
+  width: 500px; /* Optional: Adjust width as needed */
+}
+
+.flex-form label {
+  margin-bottom: 5px; /* Optional: Add space between labels and inputs */
+}
+
+.flex-form input {
+  margin-bottom: 10px; /* Optional: Add space between inputs */
+}
+
+.flex-form textarea {
+  height: 100px; /* Adjust the height as needed */
+  resize: vertical; /* Optional: Allow vertical resizing */
+}
+
