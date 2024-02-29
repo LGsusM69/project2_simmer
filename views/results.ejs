@@ -1,24 +1,21 @@
 <%- include('./partials/header') %>
 
-
 <div class="container">
    <h1>Search Results</h1>
-   <ul class="recipe-list">
+   <div class="recipe-container">
      <% recipes.forEach(recipe => { %>
-       <li>
+       <div class="recipe-item">
          <a href="/recipes/<%= recipe.id %>">
            <div class="recipe-card">
+            <h2 class="recipe-title"><%= recipe.title %></h2>
+
              <img class="recipe-image" src="<%= recipe.image %>" alt="<%= recipe.title %>">
-             <h2 class="recipe-title"><%= recipe.title %></h2>
            </div>
          </a>
-       </li>
+       </div>
      <% }) %>
-   </ul>
+   </div>
    <a href="">Back to home</a>
 </div>
-
-
-
 
 <%- include('./partials/footer') %>
