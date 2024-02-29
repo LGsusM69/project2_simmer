@@ -16,8 +16,10 @@ var indexRouter = require('./routes/index');
 const recipesRouter = require("./routes/recipes");
 const reviewsRouter = require("./routes/reviews");
 const profilesRouter = require("./routes/profiles");
+
 var usersRouter = require('./routes/users');
 const { request } = require('http');
+
 
 var app = express();
 
@@ -54,7 +56,6 @@ app.use(function(req, res, next) {
 //   res.render('./partials/header', { title: 'Simmer',});
 // });
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use("/recipes", recipesRouter);
 app.use("/reviews", reviewsRouter);
 app.use("/profiles", profilesRouter);

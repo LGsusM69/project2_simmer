@@ -1,11 +1,10 @@
 var express = require('express');
 var router = express.Router();
-//const recipe = require('../models/recipe');
+const passport =  require('passport');
 
 const indexCtrl = require("../controllers/index");
 
 const data = require("../data/recipe.js");
-const passport =  require('passport');
 
 /* GET home page. */
 /*router.get('/', function(req, res, next) {

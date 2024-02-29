@@ -15,12 +15,12 @@ const userSchema = new Schema({
   });
 
 
-const collectionSchema = new Schema({
+/*const collectionSchema = new Schema({
     recipe: [{
         type: Schema.Types.ObjectId,
         ref: "Recipe"
     }]
-});
+});*/
 
 
 
