@@ -3,8 +3,7 @@
 <div class="profile">
     <div class="profile-info">
         <!-- Add user's bio -->
-        <img src="profile-picture.jpg" alt="Profile Picture">
-        <p>About Me: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget urna rutrum, congue velit eu, venenatis lorem.</p>
+        <img src="<%=user.avatar %>" alt="Profile Picture">
     
         
     </div>
@@ -12,7 +11,7 @@
     <div class="recipes">
         
         <h5>Recipes I Love</h5>
-        <% if (savedRecipes.length > 0) { %>
+        <% if (savedRecipes && savedRecipes.length > 0) { %>
             <ul>
                 <% savedRecipes.forEach(function(recipe) { %>
                     <li><%= recipe.title %></li>
