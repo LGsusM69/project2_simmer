@@ -25,8 +25,10 @@ passport.use(new GoogleStrategy(
           email: profile.emails[0].value,
           avatar: profile.photos[0].value
         });
+        console.log("passportuser:", user);
         return cb(null, user);
       } catch (err) {
+        console.log("passport", err)
         return cb(err);
       }
     }

@@ -17,6 +17,7 @@ const recipesRouter = require("./routes/recipes");
 const reviewsRouter = require("./routes/reviews");
 const profilesRouter = require("./routes/profiles");
 var usersRouter = require('./routes/users');
+const { request } = require('http');
 
 var app = express();
 
@@ -42,13 +43,16 @@ app.use(passport.session());
 
 app.use(function(req, res, next) {
   res.locals.user = req.user;
+  console.log("request", req.user)
+  console.log("response", res.locals.user);
   next();
 });
 
-app.get('/', (req, res) => {
-  const user = req.user; // Assuming req.user is set by a middleware like passport.js
-  res.render('./partials/header', { title: 'Simmer', user });
-});
+// app.get('/', (req, res) => {
+//  const user = req.user; // Assuming req.user is set by a middleware like passport.js
+//   console.log("serveruser:", req.user);
+//   res.render('./partials/header', { title: 'Simmer',});
+// });
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use("/recipes", recipesRouter);
