@@ -13,7 +13,7 @@ const recipeSchema = new Schema({
     description:{type: String, required: true},
     ingredients:{type: [String], required: true},
     privacy: {type: String, required: true,
-        enum: ["public", "private"]},
+        enum: ["public", "private"], default: "private"},
     instructions:{type: String, required: true},
     imgURL: String,
     reviews: [reviewSchema],

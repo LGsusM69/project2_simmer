@@ -50,13 +50,24 @@ async function show(req, res) {
 
 async function addToCollection(req, res) {
 //get collection
-const userCollection = req.user;
+console.log("collection:");
+const userCollection = req.user.collection;
+console.log(userCollection);
 //get recipeID"
 const recipeId = req.body.recipeId
 //get recipe:
 const recipe = await Recipe.findById(recipeId);
 console.log(recipe);
 //add recipe to userCollection
+
+try {
+    userCollection.recipes.push(recipe);
+    // Save any changes made to the movie doc
+    await recipe.save();
+  } catch (err) {
+    console.log("My glases... i lost my glases");
+    console.log(err);
+  }
 
 
 }
