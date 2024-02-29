@@ -5,8 +5,13 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
 var passport = require('passport');
+const axios = require('axios');
+
 
 require('dotenv').config();
+const api_key = process.env.API_KEY;
+console.log(process.env.API_KEY);
+
 require('./config/database');
 require('./config/passport');
 
@@ -16,6 +21,7 @@ var indexRouter = require('./routes/index');
 const recipesRouter = require("./routes/recipes");
 const reviewsRouter = require("./routes/reviews");
 const profilesRouter = require("./routes/profiles");
+const mainRouter = require('./routes/main');
 
 var usersRouter = require('./routes/users');
 const { request } = require('http');
@@ -55,6 +61,7 @@ app.use('/', indexRouter);
 app.use("/recipes", recipesRouter);
 app.use("/reviews", reviewsRouter);
 app.use("/profiles", profilesRouter);
+app.use('/', mainRouter);
 
 
 // catch 404 and forward to error handler
