@@ -7,10 +7,10 @@ const recipesCtrl = require("../controllers/recipes");
 
 router.get("/new", recipesCtrl.new);
 
-router.post("/", recipesCtrl.create);
-
 router.get("/:id", recipesCtrl.show)
 
+router.post("/", recipesCtrl.create);
 
+router.post("/:id/users/:id", recipesCtrl.addToCollection);
 
 module.exports = router;

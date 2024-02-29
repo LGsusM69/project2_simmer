@@ -1,11 +1,13 @@
 const Recipe = require("../models/recipe");
+const User = require("../models/recipe");
 const Axios = require("axios");
 const apiKey = process.env.API_KEY;
 
 module.exports = {
 new: newRecipe,
 create,
-show
+show,
+addToCollection
 };
 
 async function newRecipe(req, res) {
@@ -38,11 +40,23 @@ async function show(req, res) {
     
     const response = await Axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`)
     const recipe = response.data;
-    console.log("don cangrejo");
     res.render('recipes/show', { recipe });
   } catch (error) {
     console.log("arenita");
        console.error('Error fetching recipe:', error.message);
        res.status(500).send('failed get');
    }
+}
+
+async function addToCollection(req, res) {
+//get collection
+const userCollection = req.user;
+//get recipeID"
+const recipeId = req.body.recipeId
+//get recipe:
+const recipe = await Recipe.findById(recipeId);
+console.log(recipe);
+//add recipe to userCollection
+
+
 }

@@ -13,11 +13,13 @@
             <img src="<%= recipe.imgURL %>" alt="<%= recipe.title %> Image">
 
             <!-- Save Recipe feature: -->
-            <form action="/profiles" method="post">
+            <% if(user) { %>
+            <form action="/recipes/<%= recipe._id %>/users/<%=user._id%>" method="post">
                 <input type="hidden" name="recipeId" value="<%= recipe.id %>">
                 <button type="submit">Save Recipe</button>
                 <button type="submit">View Details</button>
             </form>
+            <% } %>
         </div>
     <% }) %>
 </div>

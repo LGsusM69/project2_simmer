@@ -353,3 +353,71 @@ h4 {
   margin-top: 10px;
   font-size: 18px;
 }
+
+
+.recipe-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.recipe-title-image h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.recipe-title-image img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.recipe-instructions,
+.recipe-ingredients {
+  font-size: 16px;
+}
+
+.recipe-actions {
+  grid-column: span 3;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.save-button,
+.review-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.save-button:hover,
+.review-button:hover {
+  background-color: #45a049;
+}
+
+.star-rating {
+  margin-top: 20px;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  font-size: 24px;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.star-rating input:checked ~ label {
+  color: #ffcc00;
+}
