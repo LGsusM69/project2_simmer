@@ -12,3 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
         menu.classList.remove('open');
     });
 });
+
+const loginButton = document.getElementById('login');
+loginButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    window.location.href = '/auth/google';
+});

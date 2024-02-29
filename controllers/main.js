@@ -7,7 +7,7 @@ const apiKey = process.env.API_KEY;
 
 async function getMainPage(req, res) {
    console.log('GET request received for /');
-   res.render('main');
+   res.render({ title: 'SIMMER', recipe });
 }
 
 

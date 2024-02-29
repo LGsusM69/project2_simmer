@@ -19,7 +19,6 @@
             <h1 class="nav-bar-title">Simmer</h1>
             <img src="/images/simmer-image1.png" alt="Menu" id="menu-img">
             </div>
-            <nav>
                 <form action="/search" method="POST" id="search-bar">
                     <input type="text" name='query' class="form-control" placeholder="Find a recipe..." aria-label="Search">
                     <button type='submit' class="search-btn">Search</button>
@@ -31,24 +30,22 @@
                 <% if (user) { %>
                     <a href="/logout" class="logout nav-items">LOG OUT</a>
                 <% } else { %>
-                    <a href="/auth/google" class="login">LOG IN&nbsp;</a>
+                    <a href="/auth/google" id='login' class="login">LOG IN&nbsp;</a>
                     <img src="https://i.imgur.com/FHjYyi0.png" class="img-google">
                 <% } %>
-            </nav>
-
 
         <div id="nav-items">
 
-            <a href="/profiles" class="p-image">
-                <img src="/images/simmer create image-Photoroom (1).png" class="p-image">
+            <a href="/profiles" class="p-image logo">
+                <img src="/images/simmer create image-Photoroom (1).png" class="p-image logo">
             </a>
 
-            <a href="/recipes/new" class="c-image">
-                <img src="/images/simmer create image-Photoroom.png" class="c-image">
+            <a href="/recipes/new" class="c-image logo">
+                <img src="/images/simmer create image-Photoroom.png" class="c-image logo">
             </a>
 
-            <a href="#" class="nav-image">
-                <img src="/images/menu-img-Photoroom (2)-Photoroom.png" alt="Logo" class="nav-img">
+            <a href="#" class="nav-image logo">
+                <img src="/images/menu-img-Photoroom (2)-Photoroom.png" alt="Logo" class="nav-img logo">
             </a>
 
             <div id="menu">
