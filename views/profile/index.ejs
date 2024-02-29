@@ -5,15 +5,12 @@
         <!-- Add user's bio -->
         <img src="profile-picture.jpg" alt="Profile Picture">
         <p>About Me: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget urna rutrum, congue velit eu, venenatis lorem.</p>
-        
-        <!-- Add social media links -->
-        <div class="social-media">
-            <a href="#" class="social-link">Instagram</a>
-        </div>
+    
         
     </div>
 
     <div class="recipes">
+        
         <h5>Recipes I Love</h5>
         <% if (savedRecipes.length > 0) { %>
             <ul>
@@ -29,4 +26,6 @@
     </div>
 </div>
 
+
+<%- include("../partials/recipe")%>
 <%- include("../partials/footer") %>
