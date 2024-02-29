@@ -14,13 +14,12 @@ async function index(req, res) {
     if(req.user) {
         user = req.user;
         console.log("lluser: ");
-        const user = req.user;
         user.populate("collection");
         savedRecipes = user.collection;
         console.log(typeof savedRecipes);
 
     } else{
-        user = {id: 000}
+        user = {id: 0}
     }
     res.render("profile/index", {title: "SIMMER", recipes, savedRecipes, user});
 }
