@@ -2,7 +2,8 @@ const Recipe = require("../models/recipe");
 
 module.exports = {
 new: newRecipe,
-create
+create,
+show
 };
 
 async function newRecipe(req, res) {
@@ -21,4 +22,9 @@ async function create(req, res) {
     console.log(err);
     //res.render("", {errorMsg: err.message});
   }
+}
+
+async function show(req, res) {
+  const recipe = await Recipe.findById(req.params.id).populate();
+  req.render("recipes/show", {title : recipe.title, recipe});
 }

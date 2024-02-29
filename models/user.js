@@ -9,18 +9,12 @@ const userSchema = new Schema({
       required: true
     },
     email: String,
-    avatar: String
+    avatar: String,
+    collection: {recipes: [{type: Schema.Types.ObjectId, ref: "Recipe"}]      
+                }
   }, {
     timestamps: true
   });
-
-
-/*const collectionSchema = new Schema({
-    recipe: [{
-        type: Schema.Types.ObjectId,
-        ref: "Recipe"
-    }]
-});*/
 
 
 
