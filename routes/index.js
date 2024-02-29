@@ -4,13 +4,7 @@ const passport =  require('passport');
 
 const indexCtrl = require("../controllers/index");
 
-const data = require("../data/recipe.js");
 
-/* GET home page. */
-/*router.get('/', function(req, res, next) {
-  recipes = data.recipes;
-  res.render('main', { title: 'Simmer', recipes });
-});*/
 
 router.get("/", indexCtrl.index);
 
@@ -22,7 +16,7 @@ router.get('/auth/google', passport.authenticate(
     // Requesting the user's profile and email
     scope: ['profile', 'email'],
     // Optionally force pick account every time
-    prompt: "select_account"
+    //prompt: "select_account"
   }
 ));
 
