@@ -13,11 +13,13 @@
 
 
    <h2> Instructions</h2>
+   <% if(recipe.analyzedInstructions[0]) { %>
    <ol>
        <% recipe.analyzedInstructions[0].steps.forEach(step => { %>
            <li> <%= step.step %></li>
        <% }) %>
    </ol>
+   <% } %>
 </div>
 
 

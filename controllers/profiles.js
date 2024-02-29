@@ -7,8 +7,18 @@ index
 };
 
 async function index(req, res) {
+    console.log("arenitaaaaaa");
     const recipes = await Recipe.find({});
-    const savedRecipes = data.savedRecipes;
+    //const savedRecipes = data.savedRecipes;
     //const savedRecipes = await Recipe.find({})
-    res.render("profile/index", {recipes, savedRecipes});
+    let savedRecipes = [{}];
+    if(req.user) {
+        console.log("lluser: ");
+        const user = req.user;
+        user.populate("collection");
+        savedRecipes = user.collection;
+        console.log(typeof savedRecipes);
+
+    }
+    res.render("profile/index", {title: "SIMMER", recipes, savedRecipes});
 }

@@ -7,4 +7,5 @@ module.exports = {
 async function index(req, res) {
     const recipes = await Recipe.find({});
     res.render('main', { title: 'SIMMER', recipes });
+    
 }
