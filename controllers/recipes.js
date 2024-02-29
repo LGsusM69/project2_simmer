@@ -25,6 +25,7 @@ async function create(req, res) {
 }
 
 async function show(req, res) {
-  const recipe = await Recipe.findById(req.params.id).populate();
-  req.render("recipes/show", {title : recipe.title, recipe});
+  //const recipe = await Recipe.findById(req.params.id).populate();
+
+  res.render("recipes/show", {title : recipe.title, recipe});
 }
