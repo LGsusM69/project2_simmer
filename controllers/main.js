@@ -6,14 +6,14 @@ const apiKey = process.env.API_KEY;
 
 
 async function getMainPage(req, res) {
-   console.log('GET request received for /');
+   //console.log('GET request received for /');
    res.render({ title: 'SIMMER', recipe });
 }
 
 
 async function searchRecipes(req, res) {
    const { query } = req.body;
-   console.log(`POST request received for /search with query: ${query}`);
+   //console.log(`POST request received for /search with query: ${query}`);
    try {
        const response = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${apiKey}`)
        const recipes = response.data.results;
@@ -27,13 +27,13 @@ async function searchRecipes(req, res) {
 
 async function getRecipeDetail(req, res) {
    const { id } = req.params;
-   console.log(`GET request received for /recipe/${id}`);
+   //console.log(`GET request received for /recipe/${id}`);
    try {
        const response = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`)
        const recipe = response.data;
        res.render('recipe', { recipe });
    } catch (error) {
-       console.error('Error fetching recipe:', error.message);
+       //console.error('Error fetching recipe:', error.message);
        res.status(500).send('failed get');
    }
 }
