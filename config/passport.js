@@ -12,8 +12,9 @@ passport.use(new GoogleStrategy(
     // The verify callback function
     // Let's use async/await!
     async function(accessToken, refreshToken, profile, cb) {
-      // A user has logged in with OAuth...
       try {
+      // A user has logged in with OAuth...
+        console.log("123tamarindo");
         // A user has logged in with OAuth...
         let user = await User.findOne({ googleId: profile.id });
         // Existing user found, so provide it to passport
@@ -27,6 +28,7 @@ passport.use(new GoogleStrategy(
         });
         return cb(null, user);
       } catch (err) {
+        console.log("rawalejandro");
         return cb(err);
       }
     }

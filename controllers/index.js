@@ -6,6 +6,7 @@ module.exports = {
 
 async function index(req, res) {
     const recipes = await Recipe.find({});
-    const asdf = res.
-    res.render('main', { title: 'SIMMER', recipes });
+    const user = req.user; 
+    console.log(user);
+    res.render('main', { title: 'SIMMER', recipes, user});
   }
