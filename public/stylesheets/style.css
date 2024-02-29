@@ -223,9 +223,8 @@ h4 {
 
 .recipe-item img {
   align-items: center;;
-  width: 450px;
-  height: auto;
-  margin: 20px 20px 20px 20px;
+  max-width: 100%;
+  max-height: 150%
 }
 
 .recipe-item h2 {
@@ -345,13 +344,7 @@ h4 {
   margin-bottom: 20px;
 }
 
-.recipe-card {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
-  text-align: center;
-}
+
 
 .recipe-image {
   width: 100%;
@@ -365,15 +358,6 @@ h4 {
 }
 
 
-.recipe-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
 
 .recipe-title-image h1 {
   font-size: 24px;
