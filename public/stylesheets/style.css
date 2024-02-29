@@ -1,12 +1,15 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   height: 100%;
-  background-color: darkgray;
+  background-color: rgba(255, 208, 0, 0.508);
   font-family: "Bebas Neue", sans-serif;
 
 }
 h1 {
   text-align: center;
+  font-size: 80px;
+  margin-top: 25px;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -30,7 +33,7 @@ h2 {
 #nav-title {
   display: flex;
   align-items: center;
-  margin-left:60px;
+  margin-left:40px;
 }
 
 #search-bar {
@@ -132,10 +135,9 @@ h2 {
 
 #menu-img {
   display: flex;
-  width: 50px;
-  height: 70px;
-  margin-bottom: 20px;
-  
+  width: 70px;
+  height: 100px;
+  margin-top: 45px;
 }
 
 .menu-h6 {
@@ -165,7 +167,7 @@ h2 {
   width: 100px;
   height: 40px;
   padding: 0 20px;
-  border-radius: 15%;
+  margin-left: 10px;
   font-size: 20px;
 }
 
@@ -272,7 +274,7 @@ h4 {
   background-color: white;
   width: 500px;
   padding: 40px;
-  margin: 50px auto; /* Center the profile section horizontally */
+  margin: 50px auto; 
 }
 
 
@@ -285,23 +287,23 @@ h4 {
 .profile-info img {
   width: 100px;
   height: 80px;
-  border-radius: 50%; /* Makes the image a circle */
+  border-radius: 50%; 
   margin-bottom: 20px;
 }
 
 .social-link {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007bff; /* Blue color */
-  color: #fff; /* White text color */
+  background-color: #007bff; 
+  color: #fff; 
   text-decoration: none;
   border-radius: 5px;
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  transition: background-color 0.3s ease; 
   margin-bottom: 50px;
 }
 
 .social-link:hover {
-  background-color: #0056b3; /* Darker blue color on hover */
+  background-color: #0056b3; 
 }
 
 
@@ -315,4 +317,39 @@ h4 {
 
 .recipes ul {
   list-style: none;
+}
+
+
+.container {
+  padding: 20px;
+}
+
+.recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+}
+
+.recipe-item {
+  width: calc(33.33% - 20px); 
+  margin-bottom: 20px;
+}
+
+.recipe-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+.recipe-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.recipe-title {
+  margin-top: 10px;
+  font-size: 18px;
 }
