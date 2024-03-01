@@ -7,7 +7,7 @@ index
 };
 
 async function index(req, res) {
-    console.log("arenitaaaaaa");
+    if(!(req.user)) {res.redirect("auth/google");}
     let recipes = await Recipe.find({});
     let savedRecipes = [{}];
     let user;
