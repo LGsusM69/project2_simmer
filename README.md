@@ -7,17 +7,20 @@ This Recipe App allows users to search for recipes based on ingredients and also
 
 Features
 
-Search for recipes by ingredients
-Create and save your own recipes
-View saved recipes in your profile
-Google OAuth integration for user authentication
+-Search for recipes by ingredients
+-Create and save your own recipes
+-View saved recipes in your profile
+-Google OAuth integration for user authentication
+
+
 Technologies Used
-Node.js
-Express.js
-MongoDB
-EJS (Embedded JavaScript) for templating
-Axios for making HTTP requests to the Spoonacular API
-Google OAuth for user authentication
+
+-Node.js
+-Express.js
+-MongoDB
+-EJS (Embedded JavaScript) for templating
+-Axios for making HTTP requests to the Spoonacular API
+-Google OAuth for user authentication
 
 # Screenshot
 
