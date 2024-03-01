@@ -32,6 +32,7 @@ Technologies Used
 # Getting Started
 
 Deployment Link - https://simmer-a4ad1fc11a76.herokuapp.com/
+Trello Link - https://trello.com/b/hmGc7vYz/project-2
 
 # Next Steps
 
