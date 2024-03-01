@@ -1,10 +1,7 @@
 <%- include("../partials/header", {title: "SIMMER"})%>
 
-<br>
-
 <div class="profile">
     <div class="profile-info">
-        <!-- Add user's bio -->
         <img src="<%=user.avatar %>" alt="Profile Picture">
         <div class="user-name-container"><%= user.name %></div>
     </div>
@@ -20,7 +17,7 @@
         <% } else { %>
             <p>No saved recipes yet.</p>
         <% } %>
-        <!-- Add statistics about saved recipes -->
+        <!-- Add stats about saved recipes -->
         <p>Total Saved Recipes: <%= savedRecipes.length %></p>
     </div>
 </div>
