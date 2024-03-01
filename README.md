@@ -22,4 +22,6 @@ Come back for our deployed site!
 # Next Steps
 
 - Implement a 'Reviews' feature
+- Access other user profiles and their collection of Saved Recipes
 - Add additional recipes to the DB
+- 
