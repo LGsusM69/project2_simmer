@@ -9,7 +9,8 @@ index
 async function index(req, res) {
     if(!(req.user)) {res.redirect("auth/google");}
     let recipes = await Recipe.find({});
-    let savedRecipes = [{}];
+    let collection;
+    if(req.user) collection = req.user.collection;
     let user;
     if(req.user) {
         user = req.user;
@@ -23,5 +24,5 @@ async function index(req, res) {
         user = {id: 0}
     }
     recipes = savedRecipes;
-    res.render("profile/index", {title: "SIMMER", recipes, savedRecipes, user});
+    res.render("profile/index", {title: "SIMMER", recipes, collection, user});
 }
