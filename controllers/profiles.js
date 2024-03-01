@@ -7,7 +7,11 @@ index
 };
 
 async function index(req, res) {
-    if(!(req.user)) {res.redirect("auth/google");}
+    if((req.user) === undefined) {
+        res.redirect("auth/google");
+        return;
+        console.log("el crustaceo cascarudo");
+    }
     let recipes = await Recipe.find({});
     let collection;
     if(req.user) collection = req.user.collection;
