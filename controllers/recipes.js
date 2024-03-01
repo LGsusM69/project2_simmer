@@ -50,16 +50,28 @@ async function show(req, res) {
 
 async function addToCollection(req, res) {
 //get collection
-console.log("user:");
 const user = req.user;
-console.log(user);
 //get recipeID"
 const recipeId = req.body.recipeId
 //get recipe:
 const recipe = await Recipe.findById(recipeId);
-console.log(recipe);
 //add recipe to userCollection
+//if(User.exists({collection: recipeId})) {
+  //console.log("ya existe we");
+  console.log("antes:");
+  
+let exists = false;
+user.collection.forEach(function(element)
+  {
+    if(element == recipeId) exists = true;
+  }
+);
+if(exists) return;
+  //console.log(exists);
 
+  console.log("despues");
+  //return;
+//}
 try {
     user.collection.push(recipe);
     // Save any changes made to the movie doc
