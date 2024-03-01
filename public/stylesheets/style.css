@@ -7,7 +7,7 @@ body {
 }
 h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 60px;
   margin-top: 25px;
   margin-bottom: 20px;
 }
@@ -33,7 +33,6 @@ h2 {
 #nav-title {
   display: flex;
   align-items: center;
-  margin-left:40px;
 }
 
 #search-bar {
@@ -137,7 +136,7 @@ h2 {
   display: flex;
   width: 70px;
   height: 100px;
-  margin-top: 45px;
+  margin-top: 15px;
 }
 
 .menu-h6 {
@@ -165,7 +164,7 @@ h2 {
   background-color: #EE3636;
   color: #fff;
   width: 100px;
-  height: 40px;
+  height: 35px;
   padding: 0 20px;
   margin-left: 10px;
   font-size: 20px;
@@ -443,8 +442,8 @@ h4 {
   color: #ffcc00;
 }
 
-form .save-btn,
-form .view-btn {
+
+form[action^="/recipes/"] button[type="submit"] {
   background-color: #4CAF50;
   color: white;
   border: none;
