@@ -14,14 +14,14 @@
 
             <!-- Save Recipe feature: -->
             <% if(user) { %>
-            <form action="/recipes/<%= recipe._id %>/users/<%=user._id%>" method="post">
+            <form action="/recipes/<%= recipe._id %>/users/<%=user._id%>" method="POST">
                 <input type="hidden" name="recipeId" value="<%= recipe.id %>">
                 <% if(collection.includes(recipe._id)) {
                     console.log("la incluye");
                 }else { %>
                     <button type="submit">Save Recipe</button>
                 <% } %>
-                <button type="submit">View Details</button>
+                <button type="submit" formaction="recipes/<%= recipe._id %>" formmethod="GET">View Details</button>
             </form>
             <% } %>
         </div>
