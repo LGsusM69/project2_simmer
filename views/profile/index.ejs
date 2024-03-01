@@ -4,12 +4,10 @@
     <div class="profile-info">
         <!-- Add user's bio -->
         <img src="<%=user.avatar %>" alt="Profile Picture">
-    
-        
+        <div class="user-name-container"><%= user.name %></div>
     </div>
 
     <div class="recipes">
-        
         <h5>Recipes I Love</h5>
         <% if (savedRecipes && savedRecipes.length > 0) { %>
             <ul>
