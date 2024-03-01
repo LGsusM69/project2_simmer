@@ -23,7 +23,12 @@
                 <% } %>
                 <button type="submit" formaction="recipes/<%= recipe._id %>" formmethod="GET">View Details</button>
             </form>
-            <% } %>
+            <% } else {%>
+                <form action="recipes/<%= recipe._id %>" method="GET">
+                    <input type="hidden" name="recipeId" value="<%= recipe.id %>">
+                    <button type="submit">View Details</button>
+                </form>
+                <% } %>
         </div>
     <% }) %>
 </div>
