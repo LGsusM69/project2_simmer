@@ -15,7 +15,7 @@ Simmer is a web application built using Node/Express/MongoDB app from ground up.
 
 # Getting Started
 
-[Click to Play Connect Four!](your deployment url here)
+Come back for our deployed site!
 
 # Next Steps
 
