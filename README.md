@@ -1,5 +1,23 @@
-# SIMMER
-Simmer is a web application built using Node/Express/MongoDB app from ground up. Simmer is a recipe sharing application where users can browse a selection of recipes and can be saved upon logging in.
+Simmer
+
+
+Description
+
+This Recipe App allows users to search for recipes based on ingredients and also lets them create and save their own recipes. It utilizes the Spoonacular API for recipe data.
+
+Features
+
+Search for recipes by ingredients
+Create and save your own recipes
+View saved recipes in your profile
+Google OAuth integration for user authentication
+Technologies Used
+Node.js
+Express.js
+MongoDB
+EJS (Embedded JavaScript) for templating
+Axios for making HTTP requests to the Spoonacular API
+Google OAuth for user authentication
 
 # Screenshot
 
@@ -7,13 +25,6 @@ Simmer is a web application built using Node/Express/MongoDB app from ground up.
 
 ![image](https://github.com/LGsusM69/project2_simmer/assets/12722536/0ce66185-cc34-4b43-9e60-50e15ff6684b)
 
-
-# Technologies Used
-
-- Node/Express/MongoDB
-- JavaScript
-- HTML
-- CSS
 
 # Getting Started
 
