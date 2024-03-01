@@ -14,11 +14,11 @@
 
             <!-- Save Recipe feature: -->
             <% if(user) { %>
-            <form action="/recipes/<%= recipe._id %>/users/<%=user._id%>" method="post">
-                <input type="hidden" name="recipeId" value="<%= recipe.id %>">
-                <button type="submit">Save Recipe</button>
-                <button type="submit">View Details</button>
-            </form>
+                <form action="/recipes/<%= recipe._id %>/users/<%=user._id%>" method="post">
+                    <input type="hidden" name="recipeId" value="<%= recipe.id %>">
+                    <button type="submit" class="save-btn">Save Recipe</button>
+                    <button type="submit" class="view-btn">View Details</button>
+                </form>
             <% } %>
         </div>
     <% }) %>
