@@ -49,6 +49,7 @@ async function show(req, res) {
 }
 
 async function addToCollection(req, res) {
+  console.log("add to collection");
 //get collection
 const user = req.user;
 //get recipeID"
@@ -76,8 +77,9 @@ try {
     user.collection.push(recipe);
     // Save any changes made to the movie doc
     await user.save();
+    res.redirect("/");
   } catch (err) {
-    console.log("My glases... i lost my glases");
+    console.log("couldnt add to collection");
     console.log(err);
   }
 
