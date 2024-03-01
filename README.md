@@ -8,10 +8,10 @@ Simmer is a web application built using Node/Express/MongoDB app from ground up.
 
 # Technologies Used
 
+- Node/Express/MongoDB
 - JavaScript
 - HTML
 - CSS
-- CardStarter CSS Library
 
 # Getting Started
 
@@ -19,5 +19,5 @@ Simmer is a web application built using Node/Express/MongoDB app from ground up.
 
 # Next Steps
 
-- 
-- Future enhancement two... 
+- Implement a 'Reviews' feature
+- Add additional recipes to the DB
