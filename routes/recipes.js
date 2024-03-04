@@ -13,4 +13,6 @@ router.post("/", recipesCtrl.create);
 
 router.post("/:id/users/:id", recipesCtrl.addToCollection);
 
+router.delete("/:id", recipesCtrl.delete);
+
 module.exports = router;

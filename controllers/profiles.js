@@ -10,7 +10,6 @@ async function index(req, res) {
     if((req.user) === undefined) {
         res.redirect("auth/google");
         return;
-        console.log("el crustaceo cascarudo");
     }
     let recipes = await Recipe.find({});
     let collection;
@@ -18,11 +17,8 @@ async function index(req, res) {
     let user;
     if(req.user) {
         user = req.user;
-        console.log("lluser: ");
         user.populate("collection");
         savedRecipes = user.collection;
-        console.log(typeof savedRecipes);
-        console.log(savedRecipes);
 
     } else{
         user = {id: 0}

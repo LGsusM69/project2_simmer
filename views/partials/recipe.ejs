@@ -14,10 +14,10 @@
             <% if(user) { %>
             <form action="/recipes/<%= recipe._id %>/users/<%=user._id%>" method="POST">
                 <input type="hidden" name="recipeId" value="<%= recipe.id %>">
-                <% if(collection.includes(recipe._id)) {
-                    console.log("la incluye");
-                }else { %>
-                    <button type="submit">Save Recipe</button>
+                <% if(collection.includes(recipe._id)) { %>
+                    <button type="submit" formaction="/recipes/<%= recipe._id %>?_method=DELETE" formmethod="POST">Delete</button>
+                <% }else { %>
+                    <button type="submit">Save</button>
                 <% } %>
                 <button type="submit" formaction="recipes/<%= recipe._id %>" formmethod="GET">View Details</button>
             </form>

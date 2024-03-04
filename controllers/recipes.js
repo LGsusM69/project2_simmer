@@ -7,7 +7,8 @@ module.exports = {
 new: newRecipe,
 create,
 show,
-addToCollection
+addToCollection,
+delete: deleteRecipe
 };
 
 async function newRecipe(req, res) {
@@ -17,7 +18,6 @@ async function newRecipe(req, res) {
 async function create(req, res) {
   console.log("create");
   let template = req.body;
-  console.log(req.body);
 
   //let owner;
   if(req.user) {
@@ -92,5 +92,20 @@ async function addToCollection(req, res) {
     console.log("couldnt add to collection");
     console.log(err);
   }
+}
+
+async function deleteRecipe(req, res) {
+  console.log("deleteRecipe: called");
+  try {
+    const collection = req.user.collection
+    collection.pull(req.params.id);
+    req.user.save();
+    console.log(`deleteRecipe: deleted`);
+    
+  } catch(err) {
+      console.log(err);
+      console.log("deleteRecipe: failed");
+  }
+  res.redirect("/");
 }
 
