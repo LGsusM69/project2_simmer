@@ -18,13 +18,17 @@
                     <button type="submit">Save</button>
                 <% } %>
                 <button type="submit" formaction="recipes/<%= recipe._id %>" formmethod="GET">View Details</button>
+                <% if(String(recipe.owner) === String(user._id)) { %>
+                    <button type="submit">Edit</button>
+                <% } %>
             </form>
             <% } else {%>
                 <form action="recipes/<%= recipe._id %>" method="GET">
                     <input type="hidden" name="recipeId" value="<%= recipe.id %>">
                     <button type="submit">View Details</button>
                 </form>
-                <% } %>
+                    
+            <% } %>
         </div>
     <% }) %>
 </div>
