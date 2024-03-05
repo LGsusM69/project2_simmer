@@ -1,0 +1,59 @@
+<%- include('../partials/header', { title: 'SIMMER' }) %>
+
+<div class="edit-form">
+    <form action="/recipes/<%= recipe._id %>?_method=PUT" method="POST" class="flex-form">
+        <label for="title">Title:</label>
+        <input type="text" name="title">
+        <label for="description">Description:</label>
+        <textarea name="description"></textarea> <!-- Changed to textarea -->
+        <label for="ingredients">Ingredients:</label>
+        <textarea name="ingredients"></textarea> <!-- Changed to textarea -->
+        <label for="instructions">Instructions:</label>
+        <textarea name="instructions"></textarea> <!-- Changed to textarea -->
+        <label for="imgURL">Image url:</label>
+        <input type="text" name="imgURL">
+        <div>
+            <div>
+                <input type="radio" id="private_recipe" value="private" name="privacy">
+                <label for="private_recipe">Personal recipes (only you can see it)</label>
+            </div>
+            <div>
+                <input type="radio" id="public_recipe" value="public" name="privacy">
+                <label for="public_recipe">Public recipes</label>
+            </div>
+        </div>
+        <input type="submit" value="Submit Changes" formaction="/recipes/<%= recipe._id %>?_method=PUT" formmethod="POST">
+    </form>
+</div>
+
+<div class="card-recipe">
+    <div class="recipe-title-image">
+        <h1><%= recipe.title %></h1>
+        <img src="<%= recipe.image %>" alt="<%= recipe.title %>" />
+        
+
+    </div>
+    <div class="recipe-instructions">
+        <h2>Instructions</h2>
+        <% if(recipe.instructions) { %>
+            <ol>
+                <li><%= recipe.instructions %></li>
+            </ol>
+            </div>
+        <div class="recipe-ingredients">
+        <h2>Ingredients</h2>
+        <ul>
+                <li><%= recipe.ingredients %></li>
+        </ul>
+        </div>
+        <div class="recipe-actions">
+        <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 stars"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 stars"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 stars"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 stars"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star"></label>
+        </div>
+        </div>
+        <% } %>
+<%- include('../partials/footer') %>

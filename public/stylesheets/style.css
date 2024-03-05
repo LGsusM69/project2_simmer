@@ -459,3 +459,12 @@ form[action^="/recipes/"] button[type="submit"] {
   cursor: pointer;
   border-radius: 5px;
 }
+.edit-form {
+  margin:auto
+}
+.edit-form form {
+  max-width: 350px;
+  margin:auto
+
+
+}

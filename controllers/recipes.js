@@ -8,7 +8,9 @@ new: newRecipe,
 create,
 show,
 addToCollection,
-delete: deleteRecipe
+delete: deleteRecipe,
+edit,
+update
 };
 
 async function newRecipe(req, res) {
@@ -107,5 +109,36 @@ async function deleteRecipe(req, res) {
       console.log("deleteRecipe: failed");
   }
   res.redirect("/");
+}
+
+async function edit(req, res) {
+  console.log("edit: called");
+
+  const recipe = await Recipe.findById(req.params.id).populate();
+
+  res.render("recipes/edit", {recipe: recipe});
+
+}
+
+async function update(req, res) {
+  console.log("Update: called");
+
+  try {
+    let recipe = await Recipe.findById(req.params.id);
+  
+    for (let key in req.body) {
+      if (req.body[key] === '') delete req.body[key];
+    }
+    for(let key in req.body) {
+      recipe[key] = req.body[key];
+      await recipe.save();
+      res.redirect(`/recipes/${req.params.id}/edit?recipeId=${req.params.id}`);
+    }
+
+  } catch(err) {
+    console.log("error: ", {err});
+    res.redirect(`/recipes/${req.params.id}/edit`);
+  }
+
 }
 
